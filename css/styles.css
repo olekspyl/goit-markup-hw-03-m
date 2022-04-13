@@ -37,8 +37,15 @@ body {
     padding-right: 15px;
 }
 .section {
-    padding: 0px 94px 0px 94px;
+    padding: 94px 0px;
 }
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* header */
 .header {
@@ -49,79 +56,92 @@ body {
     letter-spacing: 0.02em;
     border-bottom:1px solid #ECECEC;
 }
+.all-in-header {
+    display: flex;
+}
+
 .header-nav {
     display: flex;
-    align-items: center;
+}
+.logo {
+    display: flex;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--first-header-color);
+
+    padding: 24px 0px;
+    margin-right: 93px;
+
+}
+
+.web-logo {
+    color: var(--accent-text-color);
 }
 
 .header-nav-list {
     display: flex;
+
 }
 
 .header-item + .header-item {
 margin-left: 50px;
 }
 
-.header-contacts-list {
-display: flex;
-margin-left: auto ;
-}
-
-.header-contacts + .header-contacts {
-    margin-left: 50px;
-}
-
-.header-contacts {
-    display: flex;
-}
-.logo {
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    color: var(--first-header-color);
-}
-
-.logo-padding {
-    display: flex;
-    margin: 24px 93px 25px 0px;
-
-}
-
-img {
-    display: block; 
-    max-width: 100%;
-    height: auto;
-    }
-
-.web-logo {
-    color: var(--accent-text-color) ;
-}
-
-
 .header-link {
     color: var(--first-header-color);
-    display:block
-}
-.header-link:focus, .header-link:hover, .header-tel:hover, .header-mail:hover, .header-tel:focus, .header-mail:focus {
-    color: var(--accent-text-color);
+    padding: 32px 0px;
+    display: block;
 }
 
-.header-tel, .header-mail, .footer-tel, .footer-mail {
-        color: var(--second-header-color);
-        display: block;
+.header-link:focus,
+.header-link:hover,
+.header-tel:hover,
+.header-mail:hover,
+.header-tel:focus,
+.header-mail:focus {
+    color: var(--accent-text-color);
 }
 
 .this-item {
     color: var(--accent-text-color);
 }
 
+.header-contacts-list {
+display: flex;
+margin-left: auto;
+}
 
-/* hero */
-.hero {
+.header-contacts + .header-contacts {
+    margin-left: 50px;
+}
+
+.header-mail, .header-tel {
+padding: 32px 0px;
+}
+
+.header-tel,
+.header-mail,
+.footer-tel,
+.footer-mail {
+    color: var(--second-header-color);
+    display: block;
+}
+
+
+
+/* hero-index */
+.hero-section {
     background-color: var(--bcg-accent-color);
+
     letter-spacing: 0.06em;
     text-align: center;
+}
+
+.hero-section {
+    background-color: var(--bcg-accent-color);
+    padding: 200px 0px;
 }
 
 .hero-title {
@@ -131,18 +151,45 @@ img {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--first-title-color);
-    margin: 0px auto 30px auto;
-    padding-top: 200px;
     width: 696px;
+
+    color: var(--first-title-color);
+
+    margin: 0px auto 30px auto;
 }
+
+.btn {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    border: transparent;
+    cursor: pointer;
+
+    color: inherit;
+
+    min-width: 200px;
+    border-radius: 4px;
+}
+
+.btn-first {
+    color: var(--btn-color);
+    background-color: var(--bcg-btn-color);
+    padding: 10px 32px;
+}
+
+
+/* hero-portfolio */
 .hero-list-btn {
-    padding-top: 94px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-bottom: 50px;
+    margin-bottom: 56px;
     }
 
 .hero-list {
@@ -166,6 +213,8 @@ margin-bottom: 0px;
 
 .bottom-border {
     border: 1px solid #EEEEEE;
+    border-top: 0px;
+    padding: 20px 24px;
 
 
 }
@@ -173,43 +222,17 @@ margin-bottom: 0px;
     font-size: 18px;
     line-height: 2.00;
     letter-spacing: 0.06em;
-    margin: 20px auto 4px auto;
     text-align: left;
-    padding-left: 24px;
-
+    margin: 0px;
 }
 
 .hero-after-item-title {
     line-height: 1.88;
     letter-spacing: 0.03em;
-    margin: 0px 0px 20px 0px;
     text-align: left;
-    padding-left: 24px;
     color: var(--first-text-color);
+    margin: 0px;
 }
-
-.btn {
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    display: inline-block;
-    align-items: center;
-    text-align: center;
-    border: transparent;
-    cursor: pointer;
-    color: inherit;
-    min-width: 200px;
-    border-radius: 4px;
-    
-   }
-
-.btn-first {
-    color: var(--btn-color);
-    background-color: var(--bcg-btn-color);
-    padding: 10px 32px;
-}
-
 
 .btn-portfolio {
     color: inherit;
@@ -256,10 +279,11 @@ margin-bottom: 0px;
      padding-bottom: 200px;
  }
 
+
+
+
 /* advantages */
 .advantages-list {
-    margin-bottom: 94px;
-    margin-top: 94px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -291,11 +315,9 @@ margin-bottom: 0px;
     text-align: center;
     letter-spacing: 0.03em;
     margin: 0px auto 50px auto;
-    padding-top: 94px;
 }
 
 .doing-list {
-margin: 0px 0px 94px 0px;
 display: flex;
 justify-content: space-between;
 }
@@ -312,6 +334,11 @@ display: flex;
     letter-spacing: 0.03em;
 }
 
+.team-list {
+    display: flex;
+    justify-content: space-between;
+}
+
 .team-item {
     background-color: var(--bcg-first-color);
     width: 270px;
@@ -319,20 +346,17 @@ display: flex;
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-list {
-    padding-bottom: 94px;
-    display: flex;
-    justify-content: space-between;
+.team-text {
+
 }
+
 .team-item-title {
     font-size: 16px;
     font-weight: 500;
-    margin: 30px 0px 10px 0px;
 }
 
 .team-after-item-title {
     color: var(--first-text-color);
-    padding-bottom: 20px;
 }
 
 /* footer */
@@ -343,6 +367,9 @@ display: flex;
     letter-spacing: 0.03em;
     }
 
+.all-in-footer {
+    padding-top: 60px;
+}
 .studio-logo {
 color: var(--first-title-color);
 }
@@ -364,14 +391,13 @@ color: var(--first-title-color);
 .logo-footer {
  margin-bottom: 20px;
  display: inline-block;
- padding-top: 60px;
 }
 
 .footer-address-item, .footer-contacts-item {
 margin-bottom: 9px;
 }
 
-.footer-contacts-item-last {
-    padding-bottom: 60px;
+.logo-footer{
+    margin-bottom: 20px;
+    padding: 0px;
 }
-
