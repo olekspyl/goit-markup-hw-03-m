@@ -247,12 +247,20 @@ margin-bottom: 0px;
     min-width: 73px;
     text-align: center;
     padding: 6px 22px;
-    margin-right: 8px;
     }
+
+.btn-item:first-child {
+    margin-right: 8px;
+}
 
 .btn-item + .btn-item {
         margin-right: 8px;
-    }
+}
+
+.btn-item:last-child {
+        margin-right: 0px;
+}
+
 .btn-size-second {
     min-width: 128px;
 }
@@ -279,20 +287,27 @@ margin-bottom: 0px;
      padding-bottom: 200px;
  }
 
+ .hero-invisible {
 
+ }
 
 
 /* advantages */
 .advantages-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    
     }
 
 .advantages-item {
     font-size: 14px;
     letter-spacing: 0.03em;
     width: 270px;
+    margin-right: 30px;
+}
+
+.advantages-item:last-child {
+    margin-right: 0px;
 }
 
 .advantages-item-title {
@@ -336,7 +351,7 @@ display: flex;
 
 .team-list {
     display: flex;
-    justify-content: space-between;
+
 }
 
 .team-item {
@@ -344,19 +359,28 @@ display: flex;
     width: 270px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    margin-right: 30px;
+
 }
 
 .team-text {
-
-}
+    padding: 30px 66px;
+    text-align: center;
+    }
 
 .team-item-title {
     font-size: 16px;
     font-weight: 500;
+    margin: 0px;
+    min-width: 152px;
+    margin-bottom: 10px;
+   
 }
 
 .team-after-item-title {
     color: var(--first-text-color);
+    margin: 0px;
+    min-width: 147px;
 }
 
 /* footer */
@@ -367,9 +391,7 @@ display: flex;
     letter-spacing: 0.03em;
     }
 
-.all-in-footer {
-    padding-top: 60px;
-}
+
 .studio-logo {
 color: var(--first-title-color);
 }
@@ -390,14 +412,14 @@ color: var(--first-title-color);
 
 .logo-footer {
  margin-bottom: 20px;
- display: inline-block;
+ display: block;
+ padding: 0px;
 }
 
 .footer-address-item, .footer-contacts-item {
 margin-bottom: 9px;
 }
 
-.logo-footer{
-    margin-bottom: 20px;
-    padding: 0px;
+.footer-contacts-item:last-child {
+    padding-bottom: 60px;
 }
